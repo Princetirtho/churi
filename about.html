@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>চুড়ি চিরন্তন | About</title>
+  <style>
+    :root {
+      --primary:#800020; 
+      --secondary:#FFD700; 
+      --bg-light:#fffaf5;
+      --footer-bg:#1a1a1a; 
+      --text-dark:#333;
+    }
+    body{margin:0;font-family:'Segoe UI',sans-serif;background:var(--bg-light);color:var(--text-dark);}
+    
+    /* Navbar */
+    nav{background:var(--primary);color:#fff;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:1000;}
+    .logo{font-size:26px;font-weight:bold;color:var(--secondary);}
+    .menu{display:flex;gap:15px;}
+    .menu a{text-decoration:none;color:#fff;font-weight:bold;padding:8px 15px;border-radius:6px;transition:.3s;}
+    .menu a:hover{background:var(--secondary);color:#000;}
+    .hamburger{display:none;font-size:28px;background:none;border:none;color:#fff;cursor:pointer;}
+    @media(max-width:768px){.hamburger{display:block}.menu{display:none;flex-direction:column;width:100%;background:#4d0010;position:absolute;top:60px;left:0}.menu.show{display:flex}.menu a{text-align:center}}
+
+    /* Hero Header */
+    .hero{background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.6)),url('t-1.1.jpg') center/cover no-repeat;padding:120px 20px;text-align:center;color:#fff;}
+    .hero h1{font-size:48px;color:var(--secondary);margin-bottom:15px;text-shadow:2px 2px 6px black;}
+    .hero p{font-size:20px;margin-bottom:25px;}
+
+    /* About Content */
+    .about{padding:60px 20px; max-width:1000px; margin:0 auto;}
+    .about h2{color:var(--primary);font-size:36px;margin-bottom:20px;}
+    .about p{font-size:18px;line-height:1.8;color:#555;margin-bottom:20px;}
+    .about ul{margin-left:20px;list-style:disc;color:#555;margin-bottom:20px;}
+    .about ul li{margin-bottom:8px;}
+    .team{display:flex;flex-wrap:wrap;gap:25px;margin-top:40px;justify-content:center;}
+    .member{background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.15);padding:20px;width:250px;text-align:center;transition:.3s;}
+    .member img{width:120px;border-radius:50%;margin-bottom:12px;}
+    .member h4{color:var(--primary);margin-bottom:6px;}
+    .member p{color:#555;font-size:16px;}
+
+    /* Footer */
+    footer{background:var(--footer-bg);color:#ddd;padding:50px 20px 20px;}
+    .footer-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;}
+    .footer-section h3{color:var(--secondary);margin-bottom:15px;}
+    .footer-section a{color:#ccc;text-decoration:none;display:block;margin-bottom:8px;transition:.3s;}
+    .footer-section a:hover{color:var(--secondary);}
+    .social-icons a{margin-right:10px;color:#ccc;font-size:20px;transition:.3s;}
+    .social-icons a:hover{color:var(--secondary);}
+    .newsletter input{padding:10px;border:none;border-radius:5px;width:70%;margin-right:5px;margin-bottom:10px;}
+    .newsletter button{padding:10px 15px;border:none;border-radius:5px;background:var(--secondary);cursor:pointer;font-weight:bold;}
+    .footer-bottom{text-align:center;margin-top:30px;font-size:14px;color:#aaa;}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">💍 চুড়ি চিরন্তন</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>আমাদের সম্পর্কে</h1>
+    <p>চুড়ি চিরন্তনের গল্প এবং আমাদের উদ্দেশ্য</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>💍 চুড়ি চিরন্তন</h2>
+    <p>চুড়ি চিরন্তন বাংলাদেশী ঐতিহ্যবাহী চুড়ি তৈরি এবং বিক্রির জন্য নিবেদিত একটি প্রতিষ্ঠান। আমাদের লক্ষ্য হল মানসম্মত চুড়ি তৈরি করে গ্রাহকদের হাতে পৌঁছে দেওয়া, যা ঐতিহ্য এবং আধুনিকতার মেলবন্ধন ঘটায়।</p>
+
+    <p>আমাদের মূল বৈশিষ্ট্যসমূহ:</p>
+    <ul>
+      <li>প্রতিটি চুড়ি অদ্বিতীয় ও সৃজনশীল ডিজাইন</li>
+      <li>উচ্চ মানের এবং টেকসই সামগ্রী ব্যবহার</li>
+      <li>গ্রাহক সন্তুষ্টি সর্বোচ্চ অগ্রাধিকার</li>
+      <li>বাংলাদেশী ঐতিহ্যকে আধুনিকতার সাথে মিশিয়ে উপস্থাপন</li>
+      <li>নিয়মিত নতুন কালেকশন এবং সীমিত সংস্করণ</li>
+    </ul>
+
+    <p>চুড়ি শুধুমাত্র অলংকার নয়, এটি সংস্কৃতি, শৈলী এবং ব্যক্তিত্বের প্রতীক। আমরা চাই প্রতিটি গ্রাহক আমাদের চুড়ি পরে নিজেকে আরও উজ্জ্বল ও আত্মবিশ্বাসী অনুভব করুক।</p>
+
+    <h2>👩‍💼 আমাদের টিম</h2>
+    <div class="team">
+      <div class="member">
+        <img src="team1.jpg" alt="Founder">
+        <h4>তীর্থচক্রবর্তি</h4>
+        <p>Founder & Creative Head</p>
+      </div>
+      <div class="member">
+        <img src="team2.jpg" alt="Designer">
+        <h4>সুমাইয়া রহমান</h4>
+        <p>Lead Designer</p>
+      </div>
+      <div class="member">
+        <img src="team3.jpg" alt="Marketing">
+        <h4>আব্দুল করিম</h4>
+        <p>Marketing Head</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>🔗 লিঙ্ক</h3>
+        <a href="index.html">হোম</a>
+        <a href="products.html">পণ্যসমূহ</a>
+        <a href="cart.html">কার্ট</a>
+        <a href="about.html">আমাদের সম্পর্কে</a>
+        <a href="contact.html">যোগাযোগ</a>
+      </div>
+      <div class="footer-section">
+        <h3>📞 যোগাযোগ</h3>
+        <a href="mailto:tirthochakroborty04@gmail.com">Send Email</a>
+        <p>WhatsApp: <a href="https://wa.me/8801304218750" target="_blank">01304-218750</a></p>
+        <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>📩 নিউজলেটার</h3>
+        <input type="email" placeholder="ইমেইল লিখুন">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 চুড়ি চিরন্তন — সকল অধিকার সংরক্ষিত
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const menu=document.getElementById('menu');
+      menu.classList.toggle('show');
+      const btn=document.querySelector('.hamburger');
+      btn.textContent=menu.classList.contains('show')?'✖':'☰';
+    }
+
+    // Initialize cart count on page load
+    function updateCartCount(){
+      let cart=JSON.parse(localStorage.getItem("cart"))||[];
+      document.getElementById("cart-count").innerText=cart.length;
+    }
+    updateCartCount();
+  </script>
+
+</body>
+</html>
